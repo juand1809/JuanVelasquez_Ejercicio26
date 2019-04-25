@@ -1,6 +1,6 @@
 all: euler.dat rk4.dat leapfrog.dat grafica.png
 
-%.png: %.dat graficas.png
+%.png: %.dat grafica.png
 	python3 graficar.py
 	
 %.dat: a.out

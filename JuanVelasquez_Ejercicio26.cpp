@@ -39,7 +39,7 @@ void solve_equation_euler(float t_init, float t_end, float delta_t, float omega,
    y_old = y;
    z_old = z;	  
    y = y_old + delta_t * z;
-   z = z_old - delta_t * pow(omega,2) * y_old;
+   z = z_old - delta_t * (omega*omega) * y_old;
    t = t + delta_t;
   }
   outfile.close();
@@ -55,7 +55,7 @@ void solve_equation_rk4(float t_init, float t_end, float delta_t, float omega, s
   outfile.open(filename);
 
   while(t<t_end){
-   outfile << t << " " << y << "" << z << endl;
+   outfile << t << " " << y << " " << z << endl;
    y_old = y;
    z_old = z;
    k1 = -(omega*omega)*y_old;
@@ -79,7 +79,7 @@ void solve_equation_leapfrog(float t_init, float t_end, float delta_t, float ome
   outfile.open(filename);
 
   while(t<t_end){
-   outfile << t << " " << y << "" << z << endl;
+   outfile << t << " " << y << " " << z << endl;
    y_old = y;
    z_old = z;	
    z_medio = z_old - (delta_t/2)*(omega*omega)*y_old;

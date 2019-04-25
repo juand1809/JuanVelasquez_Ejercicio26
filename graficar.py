@@ -6,7 +6,7 @@ os.system ("g++ JuanVelasquez_Ejercicio26.cpp")
 os.system ("./a.out")
 
 a = np.loadtxt("euler.dat")
-b = np.loadtxt("kuta.dat")
+b = np.loadtxt("rk4.dat")
 c = np.loadtxt("leapfrog.dat")
 
 plt.figure(figsize = (50,30))
